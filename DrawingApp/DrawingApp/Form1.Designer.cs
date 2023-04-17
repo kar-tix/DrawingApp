@@ -1,6 +1,6 @@
 ﻿namespace DrawingApp
 {
-    partial class BtnSave
+    partial class Form1
     {
         /// <summary>
         /// Wymagana zmienna projektanta.
@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BtnSave));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.PnlTop = new System.Windows.Forms.Panel();
             this.BtnMini = new System.Windows.Forms.Button();
-            this.BtSave = new System.Windows.Forms.Button();
+            this.BtnSave = new System.Windows.Forms.Button();
             this.BtnFile = new System.Windows.Forms.Button();
             this.BtnMax = new System.Windows.Forms.Button();
             this.BtnExit = new System.Windows.Forms.Button();
@@ -64,7 +64,7 @@
             // 
             this.PnlTop.BackColor = System.Drawing.SystemColors.Control;
             this.PnlTop.Controls.Add(this.BtnMini);
-            this.PnlTop.Controls.Add(this.BtSave);
+            this.PnlTop.Controls.Add(this.BtnSave);
             this.PnlTop.Controls.Add(this.BtnFile);
             this.PnlTop.Controls.Add(this.BtnMax);
             this.PnlTop.Controls.Add(this.BtnExit);
@@ -93,22 +93,22 @@
             this.BtnMini.UseVisualStyleBackColor = false;
             this.BtnMini.Click += new System.EventHandler(this.BtnMini_Click);
             // 
-            // BtSave
+            // BtnSave
             // 
-            this.BtSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.BtSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtSave.Dock = System.Windows.Forms.DockStyle.Left;
-            this.BtSave.FlatAppearance.BorderSize = 0;
-            this.BtSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.BtSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtSave.ForeColor = System.Drawing.Color.Black;
-            this.BtSave.Image = global::DrawingApp.Properties.Resources.diskette;
-            this.BtSave.Location = new System.Drawing.Point(59, 0);
-            this.BtSave.Margin = new System.Windows.Forms.Padding(2);
-            this.BtSave.Name = "BtSave";
-            this.BtSave.Size = new System.Drawing.Size(59, 31);
-            this.BtSave.TabIndex = 6;
-            this.BtSave.UseVisualStyleBackColor = false;
+            this.BtnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BtnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnSave.Dock = System.Windows.Forms.DockStyle.Left;
+            this.BtnSave.FlatAppearance.BorderSize = 0;
+            this.BtnSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.BtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSave.ForeColor = System.Drawing.Color.Black;
+            this.BtnSave.Image = global::DrawingApp.Properties.Resources.diskette;
+            this.BtnSave.Location = new System.Drawing.Point(59, 0);
+            this.BtnSave.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnSave.Name = "BtnSave";
+            this.BtnSave.Size = new System.Drawing.Size(59, 31);
+            this.BtnSave.TabIndex = 6;
+            this.BtnSave.UseVisualStyleBackColor = false;
             // 
             // BtnFile
             // 
@@ -190,7 +190,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 42F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 71F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 93F));
             this.tableLayoutPanel1.Controls.Add(this.BtnSetColor, 23, 1);
             this.tableLayoutPanel1.Controls.Add(this.BtnCircle, 8, 1);
             this.tableLayoutPanel1.Controls.Add(this.BtnRect, 7, 1);
@@ -412,8 +412,9 @@
             this.DrawPanel.Size = new System.Drawing.Size(791, 392);
             this.DrawPanel.TabIndex = 0;
             this.DrawPanel.TabStop = false;
+            this.DrawPanel.Click += new System.EventHandler(this.DrawPanel_Click);
             // 
-            // BtnSave
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -424,7 +425,7 @@
             this.Controls.Add(this.PnlTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "BtnSave";
+            this.Name = "Form1";
             this.Text = "Form1";
             this.PnlTop.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -442,7 +443,7 @@
         private System.Windows.Forms.Button BtnExit;
         private System.Windows.Forms.Button BtnMax;
         private System.Windows.Forms.Button BtnFile;
-        private System.Windows.Forms.Button BtSave;
+        private System.Windows.Forms.Button BtnSave;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel PnlMain;
         private System.Windows.Forms.PictureBox DrawPanel;
