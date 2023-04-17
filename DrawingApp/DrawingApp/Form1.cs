@@ -26,5 +26,15 @@ namespace DrawingApp
         {
 
         }
+
+        private void tableLayoutPanel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
