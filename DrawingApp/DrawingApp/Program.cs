@@ -16,7 +16,7 @@ namespace DrawingApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BtnSave());
+            Application.Run(new Form1());
         }
     }
 }

@@ -16,11 +16,13 @@ namespace DrawingApp
         int index = 1;
         int x, y, sX, sY, cX, cY;
         Color colorP;
+        //Color newColor;
         Point pointX, pointY;
-        Bitmap bitmap;
+        Bitmap newBitmap;
         Graphics graphics;
         Pen pen = new Pen(Color.Black, 2);
         Pen earse = new Pen(Color.White, 4);
+        ColorDialog colorDialog = new ColorDialog();
         
 
         static Point SetPoint(PictureBox pictureBox, Point point)
@@ -33,8 +35,8 @@ namespace DrawingApp
 
         private void Validate(Bitmap bitmap, Stack<Point> pointStack, int x, int y, Color newColor, Color oldColor)
         {
-            Color cx = bitmap.GetPixel(x, y);
-            if(cx == oldColor)
+            Color pixelColor = bitmap.GetPixel(x, y);
+            if(pixelColor == oldColor)
             {
                 pointStack.Push(new Point(x, y));
                 bitmap.SetPixel(x, y, newColor);
@@ -66,11 +68,30 @@ namespace DrawingApp
         public Form1()
         {
             InitializeComponent();
+            newBitmap = new Bitmap(DrawPanel.Width, DrawPanel.Height);
+            graphics = Graphics.FromImage(newBitmap);
+            graphics.Clear(Color.White);
+            DrawPanel.Image = newBitmap;
+            BtnDraw.BackColor = BtnLine1.BackColor = Color.LightBlue;
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void Palette_MouseClick(object sender, MouseEventArgs e)
+        {
+            Point pointColor = SetPoint(Palette, e.Location);
+            MainColor.BackColor = ((Bitmap)Palette.Image).GetPixel(pointColor.X, pointColor.Y);
+            colorP = MainColor.BackColor;
+            pen.Color = Palette.BackColor;
+        }
+
+        private void BtnSetColor_Click(object sender, EventArgs e)
+        {
+            colorDialog.ShowDialog();
+            colorP = MainColor.BackColor = pen.Color = colorDialog.Color;
         }
 
         private void tableLayoutPanel1_Paint_1(object sender, PaintEventArgs e)

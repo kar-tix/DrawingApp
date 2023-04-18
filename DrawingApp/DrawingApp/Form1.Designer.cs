@@ -206,7 +206,7 @@
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 31);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 4;
+            this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 12F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
@@ -227,6 +227,7 @@
             this.BtnSetColor.Size = new System.Drawing.Size(38, 44);
             this.BtnSetColor.TabIndex = 12;
             this.BtnSetColor.UseVisualStyleBackColor = true;
+            this.BtnSetColor.Click += new System.EventHandler(this.BtnSetColor_Click);
             // 
             // BtnCircle
             // 
@@ -329,7 +330,7 @@
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
             this.tableLayoutPanel1.SetRowSpan(this.panel1, 2);
-            this.panel1.Size = new System.Drawing.Size(60, 48);
+            this.panel1.Size = new System.Drawing.Size(60, 56);
             this.panel1.TabIndex = 8;
             // 
             // BtnLine3
@@ -381,16 +382,17 @@
             // Palette
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.Palette, 10);
-            this.Palette.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.Palette.Cursor = System.Windows.Forms.Cursors.Default;
             this.Palette.Image = ((System.Drawing.Image)(resources.GetObject("Palette.Image")));
             this.Palette.Location = new System.Drawing.Point(464, 12);
             this.Palette.Margin = new System.Windows.Forms.Padding(0);
             this.Palette.Name = "Palette";
             this.tableLayoutPanel1.SetRowSpan(this.Palette, 2);
-            this.Palette.Size = new System.Drawing.Size(190, 48);
+            this.Palette.Size = new System.Drawing.Size(190, 56);
             this.Palette.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Palette.TabIndex = 11;
             this.Palette.TabStop = false;
+            this.Palette.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Palette_MouseClick);
             // 
             // PnlMain
             // 
