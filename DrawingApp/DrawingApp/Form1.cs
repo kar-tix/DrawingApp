@@ -85,7 +85,7 @@ namespace DrawingApp
             Point pointColor = SetPoint(Palette, e.Location);
             MainColor.BackColor = ((Bitmap)Palette.Image).GetPixel(pointColor.X, pointColor.Y);
             colorP = MainColor.BackColor;
-            pen.Color = Palette.BackColor;
+            pen.Color = MainColor.BackColor;
         }
 
         private void BtnSetColor_Click(object sender, EventArgs e)
@@ -148,12 +148,60 @@ namespace DrawingApp
 
         private void DrawPanel_MouseClick(object sender, MouseEventArgs e)
         {
-
+            Point point = SetPoint(DrawPanel, e.Location);
+            if(index == 3)
+            {
+                colorP = pen.Color = MainColor.BackColor = ((Bitmap)DrawPanel.Image).GetPixel(point.X, point.Y);
+            }
+            if(index == 4)
+            {
+                FillUp(newBitmap, point.X, point.Y, colorP);
+            }
         }
 
         private void DrawPanel_MouseMove(object sender, MouseEventArgs e)
         {
+            if(paint)
+            {
+                if(index == 1)
+                {
+                    pointX = e.Location;
+                    graphics.DrawLine(pen, pointX, pointY);
+                    pointY = pointX;
+                }
+                if(index == 2)
+                {
+                    pointX = e.Location;
+                    graphics.DrawLine(eraser, pointX, pointY);
+                    pointY = pointX;
+                }
+            }
 
+            DrawPanel.Refresh();
+            x = e.X;
+            y = e.Y;
+            sX = e.X;
+            sY = e.Y;
+        }
+
+        private void DrawPanel_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics graphicsPaint = e.Graphics;
+            if(paint)
+            {
+                if (index == 5)
+                {
+                    graphicsPaint.DrawLine(pen, cX, cY, x, y);
+                }
+                if (index == 6)
+                {
+                    graphicsPaint.DrawRectangle(pen, cX, cY, sX, sY);
+                }
+                if (index == 7)
+                {
+                    graphicsPaint.DrawEllipse(pen, cX, cY, sX, sY);
+                }
+            }
         }
 
         private void tableLayoutPanel1_Paint_1(object sender, PaintEventArgs e)
