@@ -32,7 +32,7 @@
             this.PnlTop = new System.Windows.Forms.Panel();
             this.BtnMini = new System.Windows.Forms.Button();
             this.BtnSave = new System.Windows.Forms.Button();
-            this.BtnFile = new System.Windows.Forms.Button();
+            this.BtnNewFile = new System.Windows.Forms.Button();
             this.BtnMax = new System.Windows.Forms.Button();
             this.BtnExit = new System.Windows.Forms.Button();
             this.MainPanel = new System.Windows.Forms.TableLayoutPanel();
@@ -65,7 +65,7 @@
             this.PnlTop.BackColor = System.Drawing.SystemColors.Control;
             this.PnlTop.Controls.Add(this.BtnMini);
             this.PnlTop.Controls.Add(this.BtnSave);
-            this.PnlTop.Controls.Add(this.BtnFile);
+            this.PnlTop.Controls.Add(this.BtnNewFile);
             this.PnlTop.Controls.Add(this.BtnMax);
             this.PnlTop.Controls.Add(this.BtnExit);
             this.PnlTop.Dock = System.Windows.Forms.DockStyle.Top;
@@ -109,23 +109,25 @@
             this.BtnSave.Size = new System.Drawing.Size(59, 31);
             this.BtnSave.TabIndex = 6;
             this.BtnSave.UseVisualStyleBackColor = false;
+            this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
-            // BtnFile
+            // BtnNewFile
             // 
-            this.BtnFile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.BtnFile.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnFile.Dock = System.Windows.Forms.DockStyle.Left;
-            this.BtnFile.FlatAppearance.BorderSize = 0;
-            this.BtnFile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.BtnFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnFile.ForeColor = System.Drawing.Color.Black;
-            this.BtnFile.Location = new System.Drawing.Point(0, 0);
-            this.BtnFile.Margin = new System.Windows.Forms.Padding(2);
-            this.BtnFile.Name = "BtnFile";
-            this.BtnFile.Size = new System.Drawing.Size(59, 31);
-            this.BtnFile.TabIndex = 5;
-            this.BtnFile.Text = "File";
-            this.BtnFile.UseVisualStyleBackColor = false;
+            this.BtnNewFile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BtnNewFile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnNewFile.Dock = System.Windows.Forms.DockStyle.Left;
+            this.BtnNewFile.FlatAppearance.BorderSize = 0;
+            this.BtnNewFile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.BtnNewFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnNewFile.ForeColor = System.Drawing.Color.Black;
+            this.BtnNewFile.Image = ((System.Drawing.Image)(resources.GetObject("BtnNewFile.Image")));
+            this.BtnNewFile.Location = new System.Drawing.Point(0, 0);
+            this.BtnNewFile.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnNewFile.Name = "BtnNewFile";
+            this.BtnNewFile.Size = new System.Drawing.Size(59, 31);
+            this.BtnNewFile.TabIndex = 5;
+            this.BtnNewFile.UseVisualStyleBackColor = false;
+            this.BtnNewFile.Click += new System.EventHandler(this.BtnNewFile_Click);
             // 
             // BtnMax
             // 
@@ -453,6 +455,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.PnlTop.ResumeLayout(false);
             this.MainPanel.ResumeLayout(false);
@@ -469,7 +472,7 @@
         private System.Windows.Forms.Panel PnlTop;
         private System.Windows.Forms.Button BtnExit;
         private System.Windows.Forms.Button BtnMax;
-        private System.Windows.Forms.Button BtnFile;
+        private System.Windows.Forms.Button BtnNewFile;
         private System.Windows.Forms.Button BtnSave;
         private System.Windows.Forms.TableLayoutPanel MainPanel;
         private System.Windows.Forms.Panel PnlMain;

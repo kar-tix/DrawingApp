@@ -56,10 +56,10 @@ namespace DrawingApp
                 Point point = (Point)pixel.Pop();
                 if (point.X > 0 && point.Y > 0 && point.X < bitmap.Width - 1 && point.Y < bitmap.Height - 1)
                 {
-                    Validate(bitmap, pixel, point.X - 1, point.Y, oldColor, newColor);
-                    Validate(bitmap, pixel, point.X, point.Y - 1, oldColor, newColor);
-                    Validate(bitmap, pixel, point.X + 1, point.Y, oldColor, newColor);
-                    Validate(bitmap, pixel, point.X, point.Y + 1, oldColor, newColor);
+                    Validate(bitmap, pixel, point.X - 1, point.Y, newColor, oldColor);
+                    Validate(bitmap, pixel, point.X, point.Y - 1, newColor, oldColor);
+                    Validate(bitmap, pixel, point.X + 1, point.Y, newColor, oldColor);
+                    Validate(bitmap, pixel, point.X, point.Y + 1, newColor, oldColor);
                 }
             }
         }
@@ -98,7 +98,7 @@ namespace DrawingApp
         {
             foreach(var penWidth in WidthPenPanel.Controls.OfType<Button>())
             {
-                penWidth.BackColor = Color.WhiteSmoke;
+                penWidth.BackColor = Color.White;
                 Button button = (Button)sender;
                 button.BackColor = Color.LightBlue;
                 pen.Width = eraser.Width = Convert.ToInt32(button.Tag);
@@ -109,7 +109,7 @@ namespace DrawingApp
         {
             foreach(var btn in MainPanel.Controls.OfType<Button>())
             {
-                btn.BackColor = Color.WhiteSmoke;
+                btn.BackColor = Color.White;
                 Button button = (Button)sender;
                 button.BackColor = Color.LightBlue;
                 index = Convert.ToInt32(button.Tag);
@@ -180,8 +180,8 @@ namespace DrawingApp
             DrawPanel.Refresh();
             x = e.X;
             y = e.Y;
-            sX = e.X;
-            sY = e.Y;
+            sX = e.X - cX;
+            sY = e.Y - cY;
         }
 
         private void DrawPanel_Paint(object sender, PaintEventArgs e)
@@ -201,6 +201,35 @@ namespace DrawingApp
                 {
                     graphicsPaint.DrawEllipse(pen, cX, cY, sX, sY);
                 }
+            }
+        }
+
+        private void BtnNewFile_Click(object sender, EventArgs e)
+        {
+            graphics.Clear(Color.White);
+            DrawPanel.Image = newBitmap;
+            foreach (var btn in MainPanel.Controls.OfType<Button>())
+            {
+                btn.BackColor = Color.White;
+            }
+            foreach(var btn in WidthPenPanel.Controls.OfType<Button>())
+            {
+                btn.BackColor = Color.White;
+            }
+
+            BtnDraw.BackColor = BtnLine1.BackColor = Color.LightBlue;
+            pen.Width = eraser.Width = 2;
+            index = 1;
+        }
+
+        private void BtnSave_Click(object sender, EventArgs e)
+        {
+            var save = new SaveFileDialog();
+            save.Filter = "Image(*.jpg)|*.jpg|(*.*)|*.*";
+            if(save.ShowDialog() == DialogResult.OK)
+            {
+                Bitmap btm = newBitmap.Clone(new Rectangle(0, 0, DrawPanel.Width, DrawPanel.Height), newBitmap.PixelFormat);
+                btm.Save(save.FileName, System.Drawing.Imaging.ImageFormat.Jpeg);
             }
         }
 
