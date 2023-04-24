@@ -35,7 +35,7 @@
             this.BtnFile = new System.Windows.Forms.Button();
             this.BtnMax = new System.Windows.Forms.Button();
             this.BtnExit = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.MainPanel = new System.Windows.Forms.TableLayoutPanel();
             this.BtnSetColor = new System.Windows.Forms.Button();
             this.BtnCircle = new System.Windows.Forms.Button();
             this.BtnRect = new System.Windows.Forms.Button();
@@ -44,7 +44,7 @@
             this.BtnPipette = new System.Windows.Forms.Button();
             this.BtnClear = new System.Windows.Forms.Button();
             this.BtnDraw = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.WidthPenPanel = new System.Windows.Forms.Panel();
             this.BtnLine3 = new System.Windows.Forms.Button();
             this.BtnLine2 = new System.Windows.Forms.Button();
             this.BtnLine1 = new System.Windows.Forms.Button();
@@ -53,8 +53,8 @@
             this.PnlMain = new System.Windows.Forms.Panel();
             this.DrawPanel = new System.Windows.Forms.PictureBox();
             this.PnlTop.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.MainPanel.SuspendLayout();
+            this.WidthPenPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Palette)).BeginInit();
             this.PnlMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DrawPanel)).BeginInit();
@@ -163,57 +163,57 @@
             this.BtnExit.UseVisualStyleBackColor = false;
             this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
-            // tableLayoutPanel1
+            // MainPanel
             // 
-            this.tableLayoutPanel1.ColumnCount = 25;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 42F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 42F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 42F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 42F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 42F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 42F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 42F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 42F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 42F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 93F));
-            this.tableLayoutPanel1.Controls.Add(this.BtnSetColor, 23, 1);
-            this.tableLayoutPanel1.Controls.Add(this.BtnCircle, 8, 1);
-            this.tableLayoutPanel1.Controls.Add(this.BtnRect, 7, 1);
-            this.tableLayoutPanel1.Controls.Add(this.BtnLine, 6, 1);
-            this.tableLayoutPanel1.Controls.Add(this.BtnFill, 4, 1);
-            this.tableLayoutPanel1.Controls.Add(this.BtnPipette, 3, 1);
-            this.tableLayoutPanel1.Controls.Add(this.BtnClear, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.BtnDraw, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.panel1, 10, 1);
-            this.tableLayoutPanel1.Controls.Add(this.MainColor, 12, 1);
-            this.tableLayoutPanel1.Controls.Add(this.Palette, 13, 1);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 31);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 12F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(799, 68);
-            this.tableLayoutPanel1.TabIndex = 2;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint_1);
+            this.MainPanel.ColumnCount = 25;
+            this.MainPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+            this.MainPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 42F));
+            this.MainPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 42F));
+            this.MainPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 42F));
+            this.MainPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 42F));
+            this.MainPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.MainPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 42F));
+            this.MainPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 42F));
+            this.MainPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 42F));
+            this.MainPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.MainPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.MainPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.MainPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 42F));
+            this.MainPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.MainPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.MainPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.MainPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.MainPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.MainPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.MainPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.MainPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.MainPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.MainPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.MainPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 42F));
+            this.MainPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 93F));
+            this.MainPanel.Controls.Add(this.BtnSetColor, 23, 1);
+            this.MainPanel.Controls.Add(this.BtnCircle, 8, 1);
+            this.MainPanel.Controls.Add(this.BtnRect, 7, 1);
+            this.MainPanel.Controls.Add(this.BtnLine, 6, 1);
+            this.MainPanel.Controls.Add(this.BtnFill, 4, 1);
+            this.MainPanel.Controls.Add(this.BtnPipette, 3, 1);
+            this.MainPanel.Controls.Add(this.BtnClear, 2, 1);
+            this.MainPanel.Controls.Add(this.BtnDraw, 1, 1);
+            this.MainPanel.Controls.Add(this.WidthPenPanel, 10, 1);
+            this.MainPanel.Controls.Add(this.MainColor, 12, 1);
+            this.MainPanel.Controls.Add(this.Palette, 13, 1);
+            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.MainPanel.Location = new System.Drawing.Point(0, 31);
+            this.MainPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.MainPanel.Name = "MainPanel";
+            this.MainPanel.RowCount = 3;
+            this.MainPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 12F));
+            this.MainPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22F));
+            this.MainPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
+            this.MainPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.MainPanel.Size = new System.Drawing.Size(799, 68);
+            this.MainPanel.TabIndex = 2;
+            this.MainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint_1);
             // 
             // BtnSetColor
             // 
@@ -223,7 +223,7 @@
             this.BtnSetColor.Location = new System.Drawing.Point(666, 14);
             this.BtnSetColor.Margin = new System.Windows.Forms.Padding(2);
             this.BtnSetColor.Name = "BtnSetColor";
-            this.tableLayoutPanel1.SetRowSpan(this.BtnSetColor, 2);
+            this.MainPanel.SetRowSpan(this.BtnSetColor, 2);
             this.BtnSetColor.Size = new System.Drawing.Size(38, 44);
             this.BtnSetColor.TabIndex = 12;
             this.BtnSetColor.UseVisualStyleBackColor = true;
@@ -237,10 +237,12 @@
             this.BtnCircle.Location = new System.Drawing.Point(282, 14);
             this.BtnCircle.Margin = new System.Windows.Forms.Padding(2);
             this.BtnCircle.Name = "BtnCircle";
-            this.tableLayoutPanel1.SetRowSpan(this.BtnCircle, 2);
+            this.MainPanel.SetRowSpan(this.BtnCircle, 2);
             this.BtnCircle.Size = new System.Drawing.Size(38, 44);
             this.BtnCircle.TabIndex = 7;
+            this.BtnCircle.Tag = "7";
             this.BtnCircle.UseVisualStyleBackColor = true;
+            this.BtnCircle.Click += new System.EventHandler(this.ActionBtn_Click);
             // 
             // BtnRect
             // 
@@ -250,10 +252,12 @@
             this.BtnRect.Location = new System.Drawing.Point(240, 14);
             this.BtnRect.Margin = new System.Windows.Forms.Padding(2);
             this.BtnRect.Name = "BtnRect";
-            this.tableLayoutPanel1.SetRowSpan(this.BtnRect, 2);
+            this.MainPanel.SetRowSpan(this.BtnRect, 2);
             this.BtnRect.Size = new System.Drawing.Size(38, 44);
             this.BtnRect.TabIndex = 6;
+            this.BtnRect.Tag = "6";
             this.BtnRect.UseVisualStyleBackColor = true;
+            this.BtnRect.Click += new System.EventHandler(this.ActionBtn_Click);
             // 
             // BtnLine
             // 
@@ -263,10 +267,12 @@
             this.BtnLine.Location = new System.Drawing.Point(198, 14);
             this.BtnLine.Margin = new System.Windows.Forms.Padding(2);
             this.BtnLine.Name = "BtnLine";
-            this.tableLayoutPanel1.SetRowSpan(this.BtnLine, 2);
+            this.MainPanel.SetRowSpan(this.BtnLine, 2);
             this.BtnLine.Size = new System.Drawing.Size(38, 44);
             this.BtnLine.TabIndex = 5;
+            this.BtnLine.Tag = "5";
             this.BtnLine.UseVisualStyleBackColor = true;
+            this.BtnLine.Click += new System.EventHandler(this.ActionBtn_Click);
             // 
             // BtnFill
             // 
@@ -276,10 +282,12 @@
             this.BtnFill.Location = new System.Drawing.Point(136, 14);
             this.BtnFill.Margin = new System.Windows.Forms.Padding(2);
             this.BtnFill.Name = "BtnFill";
-            this.tableLayoutPanel1.SetRowSpan(this.BtnFill, 2);
+            this.MainPanel.SetRowSpan(this.BtnFill, 2);
             this.BtnFill.Size = new System.Drawing.Size(38, 44);
             this.BtnFill.TabIndex = 4;
+            this.BtnFill.Tag = "4";
             this.BtnFill.UseVisualStyleBackColor = true;
+            this.BtnFill.Click += new System.EventHandler(this.ActionBtn_Click);
             // 
             // BtnPipette
             // 
@@ -289,10 +297,12 @@
             this.BtnPipette.Location = new System.Drawing.Point(94, 14);
             this.BtnPipette.Margin = new System.Windows.Forms.Padding(2);
             this.BtnPipette.Name = "BtnPipette";
-            this.tableLayoutPanel1.SetRowSpan(this.BtnPipette, 2);
+            this.MainPanel.SetRowSpan(this.BtnPipette, 2);
             this.BtnPipette.Size = new System.Drawing.Size(38, 44);
             this.BtnPipette.TabIndex = 3;
+            this.BtnPipette.Tag = "3";
             this.BtnPipette.UseVisualStyleBackColor = true;
+            this.BtnPipette.Click += new System.EventHandler(this.ActionBtn_Click);
             // 
             // BtnClear
             // 
@@ -302,10 +312,12 @@
             this.BtnClear.Location = new System.Drawing.Point(52, 14);
             this.BtnClear.Margin = new System.Windows.Forms.Padding(2);
             this.BtnClear.Name = "BtnClear";
-            this.tableLayoutPanel1.SetRowSpan(this.BtnClear, 2);
+            this.MainPanel.SetRowSpan(this.BtnClear, 2);
             this.BtnClear.Size = new System.Drawing.Size(38, 44);
             this.BtnClear.TabIndex = 2;
+            this.BtnClear.Tag = "2";
             this.BtnClear.UseVisualStyleBackColor = true;
+            this.BtnClear.Click += new System.EventHandler(this.ActionBtn_Click);
             // 
             // BtnDraw
             // 
@@ -315,23 +327,25 @@
             this.BtnDraw.Location = new System.Drawing.Point(10, 14);
             this.BtnDraw.Margin = new System.Windows.Forms.Padding(2);
             this.BtnDraw.Name = "BtnDraw";
-            this.tableLayoutPanel1.SetRowSpan(this.BtnDraw, 2);
+            this.MainPanel.SetRowSpan(this.BtnDraw, 2);
             this.BtnDraw.Size = new System.Drawing.Size(38, 44);
             this.BtnDraw.TabIndex = 1;
+            this.BtnDraw.Tag = "1";
             this.BtnDraw.UseVisualStyleBackColor = true;
+            this.BtnDraw.Click += new System.EventHandler(this.ActionBtn_Click);
             // 
-            // panel1
+            // WidthPenPanel
             // 
-            this.panel1.Controls.Add(this.BtnLine3);
-            this.panel1.Controls.Add(this.BtnLine2);
-            this.panel1.Controls.Add(this.BtnLine1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(342, 12);
-            this.panel1.Margin = new System.Windows.Forms.Padding(0);
-            this.panel1.Name = "panel1";
-            this.tableLayoutPanel1.SetRowSpan(this.panel1, 2);
-            this.panel1.Size = new System.Drawing.Size(60, 56);
-            this.panel1.TabIndex = 8;
+            this.WidthPenPanel.Controls.Add(this.BtnLine3);
+            this.WidthPenPanel.Controls.Add(this.BtnLine2);
+            this.WidthPenPanel.Controls.Add(this.BtnLine1);
+            this.WidthPenPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.WidthPenPanel.Location = new System.Drawing.Point(342, 12);
+            this.WidthPenPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.WidthPenPanel.Name = "WidthPenPanel";
+            this.MainPanel.SetRowSpan(this.WidthPenPanel, 2);
+            this.WidthPenPanel.Size = new System.Drawing.Size(60, 56);
+            this.WidthPenPanel.TabIndex = 8;
             // 
             // BtnLine3
             // 
@@ -343,7 +357,9 @@
             this.BtnLine3.Name = "BtnLine3";
             this.BtnLine3.Size = new System.Drawing.Size(58, 15);
             this.BtnLine3.TabIndex = 9;
+            this.BtnLine3.Tag = "6";
             this.BtnLine3.UseVisualStyleBackColor = true;
+            this.BtnLine3.Click += new System.EventHandler(this.BtnPenWidth_Click);
             // 
             // BtnLine2
             // 
@@ -355,7 +371,9 @@
             this.BtnLine2.Name = "BtnLine2";
             this.BtnLine2.Size = new System.Drawing.Size(58, 15);
             this.BtnLine2.TabIndex = 8;
+            this.BtnLine2.Tag = "4";
             this.BtnLine2.UseVisualStyleBackColor = true;
+            this.BtnLine2.Click += new System.EventHandler(this.BtnPenWidth_Click);
             // 
             // BtnLine1
             // 
@@ -367,7 +385,9 @@
             this.BtnLine1.Name = "BtnLine1";
             this.BtnLine1.Size = new System.Drawing.Size(58, 15);
             this.BtnLine1.TabIndex = 7;
+            this.BtnLine1.Tag = "2";
             this.BtnLine1.UseVisualStyleBackColor = true;
+            this.BtnLine1.Click += new System.EventHandler(this.BtnPenWidth_Click);
             // 
             // MainColor
             // 
@@ -375,19 +395,19 @@
             this.MainColor.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.MainColor.Location = new System.Drawing.Point(425, 15);
             this.MainColor.Name = "MainColor";
-            this.tableLayoutPanel1.SetRowSpan(this.MainColor, 2);
+            this.MainPanel.SetRowSpan(this.MainColor, 2);
             this.MainColor.Size = new System.Drawing.Size(36, 42);
             this.MainColor.TabIndex = 10;
             // 
             // Palette
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.Palette, 10);
+            this.MainPanel.SetColumnSpan(this.Palette, 10);
             this.Palette.Cursor = System.Windows.Forms.Cursors.Default;
             this.Palette.Image = ((System.Drawing.Image)(resources.GetObject("Palette.Image")));
             this.Palette.Location = new System.Drawing.Point(464, 12);
             this.Palette.Margin = new System.Windows.Forms.Padding(0);
             this.Palette.Name = "Palette";
-            this.tableLayoutPanel1.SetRowSpan(this.Palette, 2);
+            this.MainPanel.SetRowSpan(this.Palette, 2);
             this.Palette.Size = new System.Drawing.Size(190, 56);
             this.Palette.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Palette.TabIndex = 11;
@@ -415,6 +435,10 @@
             this.DrawPanel.TabIndex = 0;
             this.DrawPanel.TabStop = false;
             this.DrawPanel.Click += new System.EventHandler(this.DrawPanel_Click);
+            this.DrawPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.DrawPanel_MouseClick);
+            this.DrawPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DrawPanel_MouseDown);
+            this.DrawPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.DrawPanel_MouseMove);
+            this.DrawPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.DrawPanel_MouseUp);
             // 
             // Form1
             // 
@@ -423,15 +447,15 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(799, 499);
             this.Controls.Add(this.PnlMain);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.MainPanel);
             this.Controls.Add(this.PnlTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.PnlTop.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
+            this.MainPanel.ResumeLayout(false);
+            this.WidthPenPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Palette)).EndInit();
             this.PnlMain.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DrawPanel)).EndInit();
@@ -446,7 +470,7 @@
         private System.Windows.Forms.Button BtnMax;
         private System.Windows.Forms.Button BtnFile;
         private System.Windows.Forms.Button BtnSave;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel MainPanel;
         private System.Windows.Forms.Panel PnlMain;
         private System.Windows.Forms.PictureBox DrawPanel;
         private System.Windows.Forms.Button BtnFill;
@@ -456,7 +480,7 @@
         private System.Windows.Forms.Button BtnCircle;
         private System.Windows.Forms.Button BtnRect;
         private System.Windows.Forms.Button BtnLine;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel WidthPenPanel;
         private System.Windows.Forms.Button BtnLine3;
         private System.Windows.Forms.Button BtnLine2;
         private System.Windows.Forms.Button BtnLine1;

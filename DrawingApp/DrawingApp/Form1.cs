@@ -21,7 +21,7 @@ namespace DrawingApp
         Bitmap newBitmap;
         Graphics graphics;
         Pen pen = new Pen(Color.Black, 2);
-        Pen earse = new Pen(Color.White, 4);
+        Pen eraser = new Pen(Color.White, 4);
         ColorDialog colorDialog = new ColorDialog();
         
 
@@ -92,6 +92,68 @@ namespace DrawingApp
         {
             colorDialog.ShowDialog();
             colorP = MainColor.BackColor = pen.Color = colorDialog.Color;
+        }
+
+        private void BtnPenWidth_Click(object sender, EventArgs e)
+        {
+            foreach(var penWidth in WidthPenPanel.Controls.OfType<Button>())
+            {
+                penWidth.BackColor = Color.WhiteSmoke;
+                Button button = (Button)sender;
+                button.BackColor = Color.LightBlue;
+                pen.Width = eraser.Width = Convert.ToInt32(button.Tag);
+            }
+        }
+
+        private void ActionBtn_Click(object sender, EventArgs e)
+        {
+            foreach(var btn in MainPanel.Controls.OfType<Button>())
+            {
+                btn.BackColor = Color.WhiteSmoke;
+                Button button = (Button)sender;
+                button.BackColor = Color.LightBlue;
+                index = Convert.ToInt32(button.Tag);
+            }
+        }
+
+        private void DrawPanel_MouseDown(object sender, MouseEventArgs e)
+        {
+            paint = true;
+            pointY = e.Location;
+
+            cX = e.X;
+            cY = e.Y;
+
+        }
+
+        private void DrawPanel_MouseUp(object sender, MouseEventArgs e)
+        {
+            paint = false;
+            sX = x - cX;
+            sY = y - cY;
+
+            if(index == 5)
+            {
+                graphics.DrawLine(pen, cX, cY, x, y);
+            }
+            if(index == 6)
+            {
+                graphics.DrawRectangle(pen, cX, cY, sX, sY);
+            }
+            if(index == 7)
+            {
+                graphics.DrawEllipse(pen, cX, cY, sX, sY);
+            }
+        }
+
+        private void DrawPanel_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void DrawPanel_MouseMove(object sender, MouseEventArgs e)
+        {
+
         }
 
         private void tableLayoutPanel1_Paint_1(object sender, PaintEventArgs e)
